@@ -4,13 +4,13 @@ template <typename T, size_t S> class Array {
         public:
                 constexpr int Size() const {return S;}
 
-                T& operator[](size_t index) {return data[index];}
-                const T& operator[](size_t index) const {return data[index];}
+                T& operator[](size_t index) {return m_data[index];}
+                const T& operator[](size_t index) const {return m_data[index];}
 
-                T* Data() {return data;}
+                T* Data() {return m_data;}
 
         private:
-                T data[S]; // Our array.
+                T m_data[S]; // Our array.
 };
 
 int main()
